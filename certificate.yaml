@@ -8,4 +8,4 @@ spec:
   - '*.sisalcloud.it'
   issuerRef:
     name: letsencrypt-akamai-dns
-    kind: Issuer
+    kind: ClusterIssuer
