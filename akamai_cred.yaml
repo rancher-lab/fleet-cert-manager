@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: akamai-cred
+type: Opaque
+stringData:
+  clientSecret: use_akamai_client_secret
+  accessToken: use_akamai_access_token
+  clientToken: use_akamai_client_token
