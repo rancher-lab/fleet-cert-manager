@@ -1,14 +1,23 @@
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: letsencrypt-production
+  name: letsencrypt-akamai-dns
 spec:
   acme:
-    email: alberto.clemente@sisal.it
-    preferredChain: ""
-    privateKeySecretRef:
-      name: letsencrypt-production
     server: https://acme-v02.api.letsencrypt.org/directory
+    email: alberto.clemente@sisal.it
+    privateKeySecretRef:
+      name: letsencrypt-akamai-issuer-account-key
     solvers:
-    - http01:
-        ingress: {}
+    - dns01:
+        akamai:
+          serviceConsumerDomain: akab-mpkizpacyud5pqeo-isppgo5z6ahduxzc.luna.akamaiapis.net
+          clientTokenSecretRef:
+            name: akamai-creds
+            key: clientToken
+          clientSecretSecretRef:
+            name: akamai-creds
+            key: clientSecret
+          accessTokenSecretRef:
+            name: akamai-creds
+            key: accessToken
