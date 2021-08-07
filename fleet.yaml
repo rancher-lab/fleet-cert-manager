@@ -1,9 +1,9 @@
 defaultNamespace: cert-manager
 
 helm:
-  repo: https://charts.rancher.io
-  chart: ./chart
-  releaseName: my-release
+  repo: https://charts.jetstack.io
+  chart: cert-manager
+  releaseName: cert-manager
   version: 1.4.3
   
   values:
