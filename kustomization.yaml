@@ -1,3 +1,4 @@
 resources:
   - issuer.yaml
   - akamai_creds.yaml
+  - certificate.yaml
