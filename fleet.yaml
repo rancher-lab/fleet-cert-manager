@@ -1,7 +1,11 @@
 defaultNamespace: cert-manager
+
 helm:
   repo: https://charts.rancher.io
   chart: ./chart
   releaseName: my-release
-  version: 0.1.0
+  version: 1.4.3
+  
+  values:
+    installCRDs: true
   
