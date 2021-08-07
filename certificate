@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: sisalcloud.it
+spec:
+  secretName: akamai-crt-secret
+  dnsNames:
+  - '*.sisalcloud.it'
+  issuerRef:
+    name: letsencrypt-akamai-dns
+    kind: Issuer
