@@ -1,0 +1,11 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: cluster-tls
+  namespace: fleet-local
+spec:
+  branch: main
+  insecureSkipTLSVerify: false
+  repo: 'https://github.com/rancher-lab/fleet-tls'
+  targets:
+    - clusterSelector: {}
