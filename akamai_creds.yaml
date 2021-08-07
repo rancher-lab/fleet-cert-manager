@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: akamai-cred
+  name: akamai-creds
 type: Opaque
 stringData:
   clientSecret: use_akamai_client_secret
